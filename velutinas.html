@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Velutinas en Asturias</title>
+  <link rel="stylesheet" href="style/nav.css">
+  <!-- Agrega enlaces a las bibliotecas de Leaflet.js -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="style/velutinas.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="wrapper">
+          <div class="logo"><a href="#">UAW</a></div>
+          <input type="radio" name="slider" id="menu-btn">
+          <input type="radio" name="slider" id="close-btn">
+          <ul class="nav-links">
+            <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
+            <li><a href="index.html">Inicio</a></li>
+            <li>
+              <a href="#" class="desktop-item">Proyectos</a>
+              <input type="checkbox" id="showDrop">
+              <label for="showDrop" class="mobile-item">Dropdown Menu</label>
+              <ul class="drop-menu">
+                <li><a href="velutinas.html">Velutinas</a></li>
+                <li><a href="#">Cajas nido</a></li>
+                <li><a href="#">Hoteles de insectos</a></li>
+              </ul>
+            </li>
+            <li><a href="#">¿Qué hacemos?</a></li>
+            <li><a href="#">Contacto</a></li>
+          </ul>
+          <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+        </div>
+      </nav>
+</header>
+
+<main>
+  <div id="map"></div>
+</main>
+
+<script>
+  var mymap = L.map('map').setView([43.3623, -5.8448], 13);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(mymap);
+
+</script>
+
+</body>
+</html>
