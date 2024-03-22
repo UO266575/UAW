@@ -7,36 +7,25 @@
   <link rel="stylesheet" href="style/nav.css">
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style/velutinas.css" />
   <link rel="stylesheet" href="style/style.css" />
 </head>
 <body>
 
 <header>
-    <nav>
-        <div class="wrapper">
-          <div class="logo"><a href="#">UAW</a></div>
-          <input type="radio" name="slider" id="menu-btn">
-          <input type="radio" name="slider" id="close-btn">
-          <ul class="nav-links">
-            <label for="close-btn" class="btn close-btn"><i class="fas fa-times"></i></label>
-            <li><a href="index.html">Inicio</a></li>
-            <li>
-              <a href="#" class="desktop-item">Proyectos</a>
-              <input type="checkbox" id="showDrop">
-              <label for="showDrop" class="mobile-item">Dropdown Menu</label>
-              <ul class="drop-menu">
-                <li><a href="velutinas.html">Velutinas</a></li>
-                <li><a href="#">Cajas nido</a></li>
-                <li><a href="#">Hoteles de insectos</a></li>
-              </ul>
-            </li>
-            <li><a href="#">¿Qué hacemos?</a></li>
-            <li><a href="#">Contacto</a></li>
-          </ul>
-          <label for="menu-btn" class="btn menu-btn"><i class="fas fa-bars"></i></label>
+    <div class="topnav" id="myTopnav">
+        <div class="logo">UAW</div>
+        <div class="link-items">
+            <a href="/index.html">Inicio</a>
+            <a href="/velutinas.html" class="active">Proyectos</a>
+            <a href="#">¿Qué hacemos?</a>
+            <a href="#">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+            </a>
         </div>
-      </nav>
+    </div>
 </header>
 
 <main>
@@ -67,6 +56,17 @@
       });
     });
 </script>
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
 
 </body>
 </html>
