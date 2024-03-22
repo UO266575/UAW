@@ -6,7 +6,7 @@
   font-family: 'Poppins', sans-serif;
 }
 nav{
-  position: fixed;
+  /* position: fixed; */
   z-index: 99;
   width: 100%;
   
