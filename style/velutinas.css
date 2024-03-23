@@ -4,7 +4,6 @@
 }
 
 .map-container {
-    /* margin-top: 20vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,11 +13,27 @@
 
 h1 {
     text-align: center;
-    margin-top: 5vh;
+}
+
+p {
+    width: 65%;
+    margin: auto;
+    margin-bottom: 2vh;
+}
+
+hr {
+    width: 70%;
+    margin: auto;
 }
 
 .w3-border {
     width: 65%;
     margin-top: 2vh;
     align-items: center;
+}
+
+@media screen and (max-width: 600px) {
+    #map {
+        width: 100%;
+    }
 }
