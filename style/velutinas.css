@@ -15,10 +15,15 @@ h1 {
     text-align: center;
 }
 
-p {
+.quote {
+    text-align: justify;
+    border-left: 4px solid black;
+    /* background-color: #6CD77C; */
+    padding: 0.5em 0.5em 0.5em 1em;
     width: 65%;
     margin: auto;
-    margin-bottom: 2vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
 }
 
 hr {
@@ -35,5 +40,14 @@ hr {
 @media screen and (max-width: 600px) {
     #map {
         width: 100%;
+    }
+
+    .w3-border {
+        width: 90%;
+    }
+
+    .quote {
+        text-align: left;
+        width: 85%;
     }
 }

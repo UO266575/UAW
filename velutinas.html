@@ -20,7 +20,7 @@
             <a href="index.html">Inicio</a>
             <a href="velutinas.html">Proyectos</a>
             <a href="#">¿Qué hacemos?</a>
-            <a href="#">Contact</a>
+            <a href="#">Contacto</a>
         </div>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
             <i class="fa fa-bars"></i>
@@ -30,7 +30,8 @@
 
 <main>
     <h1>Velutinas</h1>
-    <p>En España, enfrentamos una creciente preocupación ambiental y social debido a la invasión de la avispa velutina, una especie invasora que amenaza la biodiversidad local y la apicultura. Para combatir este problema, nuestro proyecto se centra en la colocación de 100 trampas caseras distribuidas a lo largo de la región de Asturias. Esta iniciativa busca mitigar el impacto de las velutinas y proteger nuestro ecosistema, mientras se fomenta la concienciación comunitaria sobre la importancia de preservar el delicado equilibrio de nuestra naturaleza.</p>
+    <hr>
+    <p class="quote">En España nos enfrentamos a una creciente preocupación ambiental y social debido a la invasión de la avispa velutina, una especie invasora que amenaza la biodiversidad local y la apicultura. Para combatir este problema, nuestro proyecto se centra en la colocación de 100 trampas caseras distribuidas a lo largo de la región de Asturias. Esta iniciativa busca mitigar el impacto de las velutinas y proteger nuestro ecosistema, mientras se fomenta la concienciación comunitaria sobre la importancia de preservar el delicado equilibrio de nuestra naturaleza.</p>
     <hr>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <div class="map-container">
@@ -64,17 +65,17 @@
     var currentWidth = 0;
 
     function increaseProgress() {
-    if (currentWidth >= finalWidth) {
-        clearInterval(progressInterval);
-    } else {
-        currentWidth++;
-        trapsProgress.style.width = currentWidth + '%';
-        trapsProgress.textContent = currentWidth + '%';
-        trapsInfo.textContent = numMarkers + ' de 100 trampas colocadas';
+        if (currentWidth >= finalWidth) {
+            clearInterval(progressInterval);
+        } else {
+            currentWidth++;
+            trapsProgress.style.width = currentWidth + '%';
+            trapsProgress.textContent = currentWidth + '%';
+            trapsInfo.textContent = numMarkers + ' de 100 trampas colocadas';
+        }
     }
-}
 
-    var progressInterval = setInterval(increaseProgress, 10);
+    var progressInterval = setInterval(increaseProgress, 30);
 });
 
     function myFunction() {
