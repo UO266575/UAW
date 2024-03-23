@@ -37,10 +37,10 @@
         <h2>Mapa</h2>
         <div id="map"></div>
         <div class="w3-border w3-large">
-            <div class="w3-container w3-padding-large w3-green w3-center w3-round" style="height:50px;width:18%">18%</div>
+            <div id="traps-progress" class="w3-container w3-padding-large w3-green w3-center w3-round" style="height:50px;width:0%">0%</div>
         </div>
         <br>
-        <p>18 de 100 trampas colocadas</p>
+        <p id="traps-info">18 de 100 trampas colocadas</p>
     </div>
 </main>
 
@@ -53,13 +53,30 @@
   fetch('data/markers.json')
     .then(response => response.json())
     .then(data => {
-      data.forEach(marker => {
+        data.forEach(marker => {
         L.marker([marker.lat, marker.lng]).addTo(mymap).bindPopup(marker.name);
-      });
     });
-</script>
 
-<script>
+    var trapsProgress = document.getElementById('traps-progress');
+    var trapsInfo = document.getElementById('traps-info');
+    var numMarkers = data.length;
+    var finalWidth = (numMarkers / 100) * 100;
+    var currentWidth = 0;
+
+    function increaseProgress() {
+    if (currentWidth >= finalWidth) {
+        clearInterval(progressInterval);
+    } else {
+        currentWidth++;
+        trapsProgress.style.width = currentWidth + '%';
+        trapsProgress.textContent = currentWidth + '%';
+        trapsInfo.textContent = numMarkers + ' de 100 trampas colocadas';
+    }
+}
+
+    var progressInterval = setInterval(increaseProgress, 10);
+});
+
     function myFunction() {
       var x = document.getElementById("myTopnav");
       if (x.className === "topnav") {
@@ -68,7 +85,7 @@
         x.className = "topnav";
       }
     }
-    </script>
+</script>
 
 </body>
 </html>
