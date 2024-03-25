@@ -14,7 +14,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-image: url('/img/placeholder_wp.jpg');
+  background-image: url('../img/placeholder_wp.jpg');
   background-size: cover;
 }
 .body-text div{
