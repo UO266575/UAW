@@ -6,6 +6,10 @@
   padding: 0px 100px;
   align-items: center;
   margin: auto;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 .link-items {
@@ -71,7 +75,6 @@
     right: 0;
     top: 0;
   }
-  .topnav.responsive {position: relative;}
   .topnav.responsive .icon {
     position: absolute;
     right: 0;
