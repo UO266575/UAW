@@ -81,6 +81,8 @@ hr {
     position: relative;
     transition: all 1s ease-in-out;
     text-align: center;
+    max-height: 85vh;
+    overflow-y: auto;
 }
 
 .popup img {
@@ -98,17 +100,31 @@ hr {
     font-weight: bold;
     text-decoration: none;
     color: #333;
-  }
+}
 
-  .popup .close:hover {
+.popup .close:hover {
     color: #06D85F;
-  }
+}
 
-  @media screen and (max-width: 600px) {
+.popup table {
+    border-collapse: collapse;
+}
+
+.popup th,
+.popup td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+.popup th {
+    background-color: #f2f2f2;
+}
+
+@media screen and (max-width: 600px) {
     .popup {
         width: 90%;
     }
-    
+
     .popup img {
         width: 12em;
         height: 12em;
