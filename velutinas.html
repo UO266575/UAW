@@ -34,6 +34,20 @@
     <hr>
     <p class="quote">En España nos enfrentamos a una creciente preocupación ambiental y social debido a la invasión de la <b>avispa velutina</b>, una especie invasora que amenaza la biodiversidad local y la apicultura. Para combatir este problema, nuestro proyecto se centra en la colocación de <b>100 trampas</b> caseras distribuidas a lo largo de la región de Asturias. Esta iniciativa busca mitigar el impacto de las velutinas y <b>proteger nuestro ecosistema</b>, mientras se fomenta la concienciación comunitaria sobre la importancia de preservar el delicado equilibrio de nuestra naturaleza.</p>
     <hr>
+    <div id="popup1" class="overlay">
+      <div class="popup">
+        <a class='close' href='#'>&times;</a>
+        <div id="trap-info"></div>
+        <!-- <h2>Identificador:</h2>
+        <p>AV-1</p>
+        <h2>Fecha:</h2>
+        <p>26/03/2024</p>
+        <h2>Coordenadas:</h2>
+        <p>43.3606785, -5.8889716</p>
+        <h2>Fotografía:</h2>
+        <img src="./img/velutinas_traps/AV-1.jpg"> -->
+      </div>
+    </div>
     <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <div class="map-container">
         <h2>Mapa</h2>
@@ -67,29 +81,41 @@
   fetch('data/markers.json')
     .then(response => response.json())
     .then(data => {
-        data.forEach(marker => {
-        L.marker([marker.lat, marker.lng]).addTo(mymap).bindPopup(marker.name);
+      data.forEach(marker => {
+        var popupContent = "<b>Nombre:</b> " + marker.name;
+        var markerPopup = L.popup().setContent(popupContent);
+        var mapMarker = L.marker([marker.lat, marker.lng]).addTo(mymap);
+        mapMarker.bindPopup(markerPopup);
+
+        mapMarker.on('click', function() {
+          var popup = document.getElementById('popup1');
+          popup.style.visibility = 'visible';
+          popup.style.opacity = '1';
+          
+          var trapInfo = document.getElementById('trap-info');
+          var popupContent = "<h2>Identificador:</h2><p>" + marker.name + "</p><h2>Fecha:</h2><p>" + marker.date + "</p><h2>Coordenadas:</h2><p>" + marker.lat + ", " + marker.lng + "</p><h2>Fotografía:</h2><img src='./img/velutinas_traps/" + marker.name + ".jpg'>";
+          trapInfo.innerHTML = popupContent;
+        });
+      });
+      var trapsProgress = document.getElementById('traps-progress');
+      var trapsInfo = document.getElementById('traps-info');
+      var numMarkers = data.length;
+      var finalWidth = (numMarkers / 100) * 100;
+      var currentWidth = 0;
+
+      function increaseProgress() {
+          if (currentWidth >= finalWidth) {
+              clearInterval(progressInterval);
+          } else {
+              currentWidth++;
+              trapsProgress.style.width = currentWidth + '%';
+              trapsProgress.textContent = currentWidth + '%';
+              trapsInfo.textContent = numMarkers + ' de 100 trampas colocadas';
+          }
+      }
+
+      var progressInterval = setInterval(increaseProgress, 30);
     });
-
-    var trapsProgress = document.getElementById('traps-progress');
-    var trapsInfo = document.getElementById('traps-info');
-    var numMarkers = data.length;
-    var finalWidth = (numMarkers / 100) * 100;
-    var currentWidth = 0;
-
-    function increaseProgress() {
-        if (currentWidth >= finalWidth) {
-            clearInterval(progressInterval);
-        } else {
-            currentWidth++;
-            trapsProgress.style.width = currentWidth + '%';
-            trapsProgress.textContent = currentWidth + '%';
-            trapsInfo.textContent = numMarkers + ' de 100 trampas colocadas';
-        }
-    }
-
-    var progressInterval = setInterval(increaseProgress, 30);
-});
 
     function myFunction() {
       var x = document.getElementById("myTopnav");
@@ -99,6 +125,13 @@
         x.className = "topnav";
       }
     }
+
+    document.querySelector('.close').addEventListener('click', function(event) {
+      event.preventDefault();
+      var popup = document.getElementById('popup1');
+      popup.style.visibility = 'hidden';
+      popup.style.opacity = '0';
+    });
 </script>
 
 </body>
