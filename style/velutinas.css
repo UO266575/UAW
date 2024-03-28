@@ -73,7 +73,9 @@ hr {
 }
 
 .popup {
-    margin: 70px auto;
+    margin-top: 5em;
+    margin-left: auto;
+    margin-right: auto;
     padding: 20px;
     background: #fff;
     border-radius: 5px;
@@ -86,23 +88,27 @@ hr {
 }
 
 .popup img {
-    width: 24em;
-    height: 24em;
+    width: 22em;
+    height: 22em;
     object-fit: cover;
 }
 
-.popup .close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
+.close-container {
+    position: relative;
+    display: flex;
+    top: 4.9em;
+    width: 100%;
+    justify-content: center;
+}
+.close {
     transition: all 200ms;
     font-size: 30px;
     font-weight: bold;
     text-decoration: none;
-    color: #333;
+    color: #F2F2F2;
 }
 
-.popup .close:hover {
+.close:hover {
     color: #06D85F;
 }
 

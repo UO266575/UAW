@@ -1,12 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
 
-.body-text{
+.body-text {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -17,12 +18,13 @@
   background-image: url('../img/placeholder_wp.jpg');
   background-size: cover;
 }
-.body-text div{
+
+.body-text div {
   font-size: 45px;
   font-weight: 600;
 }
 
-main{
+main {
   height: 100%;
 }
 
@@ -43,7 +45,8 @@ h1 {
   font-size: 3.5em;
 }
 
-.title, .sub-title{
+.title,
+.sub-title {
   background-color: #f2f2f2;
 }
 
