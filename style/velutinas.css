@@ -137,3 +137,27 @@ hr {
         object-fit: cover;
     }
 }
+
+#map {
+    z-index: 1;
+}
+
+.colab {
+    text-align: center;
+}
+
+.colab-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.colab-content p {
+    width: 30%;
+}
+
+.colab-content iframe {
+    width: 40%;
+    height: 50vh;
+}
