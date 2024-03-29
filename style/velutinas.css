@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
 #map {
     height: 60vh;
     width: 50vw;
+    z-index: 1;
 }
 
 .map-container {
@@ -9,7 +12,7 @@
     align-items: center;
     height: 70%;
     justify-content: center;
-    margin-bottom: 4vh;
+    margin-bottom: 1.2em;
 }
 
 h1 {
@@ -20,7 +23,6 @@ h1 {
 .quote {
     text-align: justify;
     border-left: 4px solid #242526;
-    /* background-color: #6CD77C; */
     padding: 0.5em 0.5em 0.5em 1em;
     width: 65%;
     margin: auto;
@@ -100,6 +102,7 @@ hr {
     width: 100%;
     justify-content: center;
 }
+
 .close {
     transition: all 200ms;
     font-size: 30px;
@@ -138,10 +141,6 @@ hr {
     }
 }
 
-#map {
-    z-index: 1;
-}
-
 .colab {
     text-align: center;
 }
@@ -151,13 +150,35 @@ hr {
     width: 100%;
     align-items: center;
     justify-content: center;
+    margin-bottom: 5vh;
+    justify-content: center;
+    gap: 2.4em;
 }
 
-.colab-content p {
+.colab-text {
     width: 30%;
+    text-align: justify;
+}
+
+.colab-text p{
+    text-align: justify;
 }
 
 .colab-content iframe {
-    width: 40%;
+    width: 30%;
     height: 50vh;
+}
+
+/* iframe[src^="https://docs.google.com/forms"] {
+} */
+
+@media screen and (max-width: 600px) {
+    .colab-content {
+        flex-direction: column;
+        /* width: 90%; */
+    }
+
+    .colab-text, .colab-content iframe {
+        width: 85%;
+    }
 }
