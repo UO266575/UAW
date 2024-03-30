@@ -17,7 +17,7 @@
 
 h1 {
     text-align: center;
-    margin-top: 8vh;
+    margin-top: 10vh;
 }
 
 .quote {
@@ -33,6 +33,22 @@ h1 {
 hr {
     width: 70%;
     margin: auto;
+}
+
+.info {
+    display: inline-flex;
+    width: 50.5%;
+    justify-content: center;
+    gap: 1em;
+    align-items: center;
+    padding: 0.5em;
+    background-color: #FFD699;
+    margin-bottom: 1em;
+    border-radius: 3px;
+}
+
+.info i {
+    font-size: 2em;
 }
 
 .w3-border {
@@ -52,6 +68,10 @@ hr {
 
     .quote {
         text-align: left;
+        width: 85%;
+    }
+
+    .info {
         width: 85%;
     }
 }
