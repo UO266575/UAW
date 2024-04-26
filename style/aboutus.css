@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+h1 {
+    text-align: center;
+    margin-top: 10vh;
+}
+
+h2 {
+    text-align: center;
+}
+
+hr {
+    width: 70%;
+    margin: auto;
+}
+
+.quote {
+    text-align: justify;
+    border-left: 4px solid #242526;
+    padding: 0.5em 0.5em 0.5em 1em;
+    width: 65%;
+    margin: auto;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+.video-container {
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.video-container iframe {
+    width: 60em;
+    height: 30em;
+}
+
+p:last-of-type {
+    margin-bottom: 4em;
+}
+
+@media screen and (max-width: 600px) {
+    .quote {
+        text-align: left;
+        width: 85%;
+    }
+}
