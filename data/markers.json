@@ -6,24 +6,8 @@
         "date": "22/03/2024",
         "reviews": [
             {
-                "revision_date": "25/03/2024",
-                "caught_queens": 2,
-                "worker_wasps": 10
-            },
-            {
-                "revision_date": "25/03/2024",
-                "caught_queens": 2,
-                "worker_wasps": 10
-            },
-            {
-                "revision_date": "25/03/2024",
-                "caught_queens": 2,
-                "worker_wasps": 10
-            },
-            {
-                "revision_date": "25/03/2024",
-                "caught_queens": 2,
-                "worker_wasps": 10
+                "revision_date": "28/04/2024",
+                "caught_queens": 25
             }
         ]
     },
@@ -31,103 +15,205 @@
         "name": "AV-2",
         "lat": 43.35885891115142,
         "lng": -5.870761446452308,
-        "date": "22/03/2024"
+        "date": "22/03/2024",
+        "reviews": [
+            {
+                "revision_date": "28/04/2024",
+                "caught_queens": 10
+            }
+        ]
     },
     {
         "name": "AV-3",
         "lat": 43.359720813427785,
         "lng": -5.8692559180482196,
-        "date": "22/03/2024"
+        "date": "22/03/2024",
+        "reviews": [
+            {
+                "revision_date": "28/04/2024",
+                "caught_queens": 7
+            }
+        ]
     },
     {
         "name": "AV-4",
         "lat": 43.360500742540175,
         "lng": -5.873382449501899,
-        "date": "22/03/2024"
+        "date": "22/03/2024",
+        "reviews": [
+            {
+                "revision_date": "28/04/2024",
+                "caught_queens": 12
+            }
+        ]
     },
     {
         "name": "AV-5",
         "lat": 43.36027446746295,
         "lng": -5.874333876656503,
-        "date": "22/03/2024"
+        "date": "22/03/2024",
+        "reviews": [
+            {
+                "revision_date": "28/04/2024",
+                "caught_queens": 30
+            }
+        ]
     },
     {
         "name": "AV-6",
         "lat": 43.359846665028854,
         "lng": -5.874143687215324,
-        "date": "22/03/2024"
+        "date": "22/03/2024",
+        "reviews": [
+            {
+                "revision_date": "28/04/2024",
+                "caught_queens": "VACÍA (trampa caída)"
+            }
+        ]
     },
     {
         "name": "AV-7",
         "lat": 43.35966329668849,
         "lng": -5.87500316841137,
-        "date": "22/03/2024"
+        "date": "22/03/2024",
+        "reviews": [
+            {
+                "revision_date": "28/04/2024",
+                "caught_queens": 36
+            }
+        ]
     },
     {
         "name": "AV-8",
         "lat": 43.35955823441681,
         "lng": -5.875904133397897,
-        "date": "22/03/2024"
+        "date": "22/03/2024",
+        "reviews": [
+            {
+                "revision_date": "28/04/2024",
+                "caught_queens": 35
+            }
+        ]
     },
     {
         "name": "AV-9",
         "lat": 43.36330935059481,
         "lng": -5.875970286345344,
-        "date": "22/03/2024"
+        "date": "22/03/2024",
+        "reviews": [
+            {
+                "revision_date": "28/04/2024",
+                "caught_queens": 27
+            }
+        ]
     },
     {
         "name": "AV-10",
         "lat": 43.36170770902521,
         "lng": -5.888079064959057,
-        "date": "22/03/2024"
+        "date": "22/03/2024",
+        "reviews": [
+            {
+                "revision_date": "28/04/2024",
+                "caught_queens": 16
+            }
+        ]
     },
     {
         "name": "AV-11",
         "lat": 43.364834547664735,
         "lng": -5.881981997407758,
-        "date": "23/03/2024"
+        "date": "23/03/2024",
+        "reviews": [
+            {
+                "revision_date": "28/04/2024",
+                "caught_queens": 23
+            }
+        ]
     },
     {
         "name": "AV-12",
         "lat": 43.365534376579504,
         "lng": -5.882758125131231,
-        "date": "23/03/2024"
+        "date": "23/03/2024",
+        "reviews": [
+            {
+                "revision_date": "28/04/2024",
+                "caught_queens": 11
+            }
+        ]
     },
     {
         "name": "AV-13",
         "lat": 43.36373220163615,
         "lng": -5.881937321897822,
-        "date": "23/03/2024"
+        "date": "23/03/2024",
+        "reviews": [
+            {
+                "revision_date": "28/04/2024",
+                "caught_queens": 4
+            }
+        ]
     },
     {
         "name": "AV-14",
         "lat": 43.3592315,
         "lng": -5.8862508,
-        "date": "23/03/2024"
+        "date": "23/03/2024",
+        "reviews": [
+            {
+                "revision_date": "28/04/2024",
+                "caught_queens": 22
+            }
+        ]
     },
     {
         "name": "AV-15",
         "lat": 43.3583383,
         "lng": -5.8882850,
-        "date": "23/03/2024"
+        "date": "23/03/2024",
+        "reviews": [
+            {
+                "revision_date": "28/04/2024",
+                "caught_queens": 46
+            }
+        ]
     },
     {
         "name": "AV-16",
         "lat": 43.3578873,
         "lng": -5.8888006,
-        "date": "23/03/2024"
+        "date": "23/03/2024",
+        "reviews": [
+            {
+                "revision_date": "28/04/2024",
+                "caught_queens": 15
+            }
+        ]
     },
     {
         "name": "AV-17",
         "lat": 43.3574300,
         "lng": -5.8888814,
-        "date": "23/03/2024"
+        "date": "23/03/2024",
+        "reviews": [
+            {
+                "revision_date": "28/04/2024",
+                "caught_queens": 43
+            }
+        ]
     },
     {
         "name": "AV-18",
         "lat": 43.3606785,
         "lng": -5.8889716,
-        "date": "23/03/2024"
+        "date": "23/03/2024",
+        "reviews": [
+            {
+                "revision_date": "28/04/2024",
+                "caught_queens": 30
+            }
+        ]
     },
     {
         "name": "AV-19",

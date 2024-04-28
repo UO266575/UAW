@@ -21,9 +21,9 @@ fetch('data/markers.json')
                 var trapInfo = document.getElementById('trap-info');
                 var popupContent = "<h2>Identificador:</h2><p>" + marker.name + "</p><h2>Fecha:</h2><p>" + marker.date + "</p><h2>Coordenadas:</h2><p>" + marker.lat + ", " + marker.lng + "</p><h2>Fotografía:</h2><img src='./img/velutinas_traps/" + marker.name + ".jpg'>";
                 if (marker.reviews && marker.reviews.length > 0) {
-                    popupContent += "<h2>Revisiones:</h2><table><tr><th>Fecha de Revisión</th><th>Reinas Atrapadas</th><th>Obreras Atrapadas</th></tr>";
+                    popupContent += "<h2>Revisiones:</h2><table><tr><th>Fecha de Revisión</th><th>Reinas Atrapadas</th></tr>";
                     marker.reviews.forEach(review => {
-                        popupContent += "<tr><td>" + review.revision_date + "</td><td>" + review.caught_queens + "</td><td>" + review.worker_wasps + "</td></tr>";
+                        popupContent += "<tr><td>" + review.revision_date + "</td><td>" + review.caught_queens + "</td></tr>";
                     });
                     popupContent += "</table>";
                 } else {
@@ -50,6 +50,23 @@ fetch('data/markers.json')
         }
 
         var progressInterval = setInterval(increaseProgress, 30);
+
+        var totalReviews = 0;
+
+        const totalWasps = data.reduce((acc, marker) => {
+            let markerReviews = marker.reviews ? marker.reviews.length : 0;
+            totalReviews += markerReviews;
+            if (marker.reviews && marker.reviews.length > 0) {
+                marker.reviews.forEach(review => {
+                    if (!isNaN(review.caught_queens)) {
+                        acc += parseInt(review.caught_queens);
+                    }
+                });
+            }
+            return acc;
+        }, 0);
+        document.getElementById("total-wasps").textContent = `Se han capturado ${totalWasps} avispas velutinas en ${totalReviews} trampas revisadas.`;
+        
     });
 
 document.querySelector('.close').addEventListener('click', function (event) {

@@ -57,6 +57,22 @@ hr {
     align-items: center;
 }
 
+.results-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 70%;
+    justify-content: center;
+    margin-bottom: 1.2em;
+}
+
+#total-wasps {
+    background-color: #4caf50;
+    padding: 0.5em;
+    border-radius: 3px;
+    font-size: 1.4em;
+}
+
 @media screen and (max-width: 600px) {
     #map {
         width: 100%;
